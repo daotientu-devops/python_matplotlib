@@ -3,18 +3,26 @@
 import matplotlib.pyplot as plt
 import numpy as np
 ypoints = np.array([3, 8, 1, 10])
-# You can use the keyword argument marker to emphasize each point with a sepcified marker
-plt.plot(ypoints, marker = '*')
+# Use the keyword argument linestyle or ls to change the style of the plotted line
+plt.plot(ypoints, linestyle='dotted')
 plt.show()
-# you can use also use the shortcut string notation parameter to specify the marker
-# marker line color
-plt.plot(ypoints, 'o--r')
+plt.plot(ypoints, linestyle='dashed')
 plt.show()
-# Marker size + color (mec: set the color of the edge of the marker)
-plt.plot(ypoints, marker = 'o', ms = 20, mec = 'r')
+plt.plot(ypoints, ls=':')
+plt.plot(ypoints, color='r')
 plt.show()
-# mfc: set the color inside the edge of the marker
-plt.plot(ypoints, marker = 'o', ms = 20, mfc = 'r')
-# Use hexadecimal color value
-plt.plot(ypoints, marker = 'o', ms = 20, mec = '#4CAF50', mfc = '#4CAF50')
+plt.plot(ypoints, c='#4CAF50', linewidth='20.5')
+plt.show()
+# Multiple lines
+y1 = np.array([3, 8, 1, 10])
+y2 = np.array([6, 2, 7, 11])
+plt.plot(y1)
+plt.plot(y2)
+plt.show()
+# Plot many lines by adding the points for the x- and y-axis for each line in the same plt.plot() function
+x1 = np.array([0, 1, 2, 3])
+y1 = np.array([3, 8, 1, 10])
+x2 = np.array([0, 1, 2, 3])
+y2 = np.array([6, 2, 7, 11])
+plt.plot(x1, y1, x2, y2)
 plt.show()
