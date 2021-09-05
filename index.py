@@ -2,27 +2,14 @@
 # The Pyplot package can be referred to as plt
 import matplotlib.pyplot as plt
 import numpy as np
-ypoints = np.array([3, 8, 1, 10])
-# Use the keyword argument linestyle or ls to change the style of the plotted line
-plt.plot(ypoints, linestyle='dotted')
-plt.show()
-plt.plot(ypoints, linestyle='dashed')
-plt.show()
-plt.plot(ypoints, ls=':')
-plt.plot(ypoints, color='r')
-plt.show()
-plt.plot(ypoints, c='#4CAF50', linewidth='20.5')
-plt.show()
-# Multiple lines
-y1 = np.array([3, 8, 1, 10])
-y2 = np.array([6, 2, 7, 11])
-plt.plot(y1)
-plt.plot(y2)
-plt.show()
-# Plot many lines by adding the points for the x- and y-axis for each line in the same plt.plot() function
-x1 = np.array([0, 1, 2, 3])
-y1 = np.array([3, 8, 1, 10])
-x2 = np.array([0, 1, 2, 3])
-y2 = np.array([6, 2, 7, 11])
-plt.plot(x1, y1, x2, y2)
+x = np.array([80, 85, 90, 95, 100, 105, 110, 115, 120, 125])
+y = np.array([240, 250, 260, 270, 280, 290, 300, 310, 320, 330])
+plt.title("Sports Watch Data")
+plt.xlabel("Average Pulse")
+plt.ylabel("Calorie Burnage")
+plt.plot(x, y)
+# Add grid line to a plot using the grid() function
+# Display only grid lines for the x-axis
+# Set line properties for the grid
+plt.grid(axis='y', color='green', linestyle='--', linewidth=5.5)
 plt.show()
