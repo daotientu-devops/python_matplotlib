@@ -2,23 +2,19 @@
 # The Pyplot package can be referred to as plt
 import matplotlib.pyplot as plt
 import numpy as np
-xpoints = np.array([2, 6])
-ypoints = np.array([50, 250])
-# Plotting x and y points
-plt.plot(xpoints, ypoints)
-plt.show()
-xpoints = np.array([1, 8])
-ypoints = np.array([3, 10])
-# Plotting (Vẽ) without line
-plt.plot(xpoints, ypoints, 'o')
-plt.show()
-# Multiple points
-xpoints = np.array([1, 2, 6, 8])
 ypoints = np.array([3, 8, 1, 10])
-plt.plot(xpoints, ypoints)
+# You can use the keyword argument marker to emphasize each point with a sepcified marker
+plt.plot(ypoints, marker = '*')
 plt.show()
-# Default X-Points
-# If we do not specify the points in the x-axis, they will get the default values 0, 1, 2, 3, 4, 5 (etc. depending on the length of the y-points)
-ypoints = np.array([3, 8, 1, 10, 5, 7])
-plt.plot(ypoints)
+# you can use also use the shortcut string notation parameter to specify the marker
+# marker line color
+plt.plot(ypoints, 'o--r')
+plt.show()
+# Marker size + color (mec: set the color of the edge of the marker)
+plt.plot(ypoints, marker = 'o', ms = 20, mec = 'r')
+plt.show()
+# mfc: set the color inside the edge of the marker
+plt.plot(ypoints, marker = 'o', ms = 20, mfc = 'r')
+# Use hexadecimal color value
+plt.plot(ypoints, marker = 'o', ms = 20, mec = '#4CAF50', mfc = '#4CAF50')
 plt.show()
