@@ -2,7 +2,10 @@
 # The Pyplot package can be referred to as plt
 import matplotlib.pyplot as plt
 import numpy as np
-# this will generate a random result
-x = np.random.normal(170, 10, 250)
-plt.hist(x)
+y = np.array([35, 25, 25, 15])
+mylabels = ["Apples", "Bananas", "Cherries", "Dates"]
+myexplode = [0.5, 0, 0, 0]
+mycolors = ["black", "hotpink", "b", "#4CAF50"]
+plt.pie(y, labels = mylabels, startangle=90, explode=myexplode, colors=mycolors, shadow=True)
+plt.legend(title="Four Fruits")
 plt.show()
